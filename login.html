@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أجري لينك | تسجيل الدخول</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-page">
+
+<!-- ===== LEFT PANEL ===== -->
+<div class="left-panel">
+  <a href="index.html" class="brand-logo">
+    <div class="logo-box">🌿</div>
+    أجري<span>-تشين</span>
+  </a>
+  <h2 class="panel-headline">
+    انضم لمنصة<br>
+    <span class="hl">مستقبل الزراعة</span><br>
+    المصرية
+  </h2>
+  <p class="panel-sub">
+    سجّل حسابك وابدأ رحلتك نحو أسعار عادلة، شحن آمن،
+    وسوق زراعي شفاف بلا وسطاء.
+  </p>
+  <div class="panel-stat">
+    <div class="stat-row"><div class="stat-icon">📊</div><div class="stat-text"><strong>بورصة أسعار لحظية</strong>تابع أسعار السوق كل ثانية</div></div>
+    <div class="stat-row"><div class="stat-icon">🚚</div><div class="stat-text"><strong>شحن مبرد وتتبع GPS</strong>محصولك يصل بأمان وفي وقته</div></div>
+    <div class="stat-row"><div class="stat-icon">🤝</div><div class="stat-text"><strong>ربط مباشر مع التجار</strong>بلا وسيط، بلا استغلال</div></div>
+    <div class="stat-row"><div class="stat-icon">💰</div><div class="stat-text"><strong>زيادة دخلك حتى ٣٠٪</strong>بيع بسعر السوق الحقيقي</div></div>
+  </div>
+</div>
+
+<!-- ===== RIGHT PANEL ===== -->
+<div class="right-panel">
+  <div class="auth-box">
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('login')">تسجيل الدخول</button>
+      <button class="tab-btn"        onclick="switchTab('register')">حساب جديد</button>
+    </div>
+
+    <!-- ===== LOGIN FORM ===== -->
+    <div class="auth-form active" id="loginForm">
+      <div class="form-title">مرحباً بعودتك 👋</div>
+      <div class="form-sub">أدخل بياناتك للدخول لحسابك</div>
+
+      <div class="field" id="lEmailField">
+        <label>البريد الإلكتروني أو رقم الهاتف</label>
+        <div class="field-wrap">
+          <span class="field-icon">📧</span>
+          <input type="text" id="lEmail" placeholder="example@mail.com أو 01XXXXXXXXX">
+        </div>
+        <div class="field-error">يرجى إدخال بريد إلكتروني صحيح</div>
+      </div>
+
+      <div class="field" id="lPassField">
+        <label>كلمة المرور</label>
+        <div class="field-wrap">
+          <span class="field-icon">🔒</span>
+          <input type="password" id="lPass" placeholder="••••••••">
+        </div>
+        <div class="field-error">كلمة المرور قصيرة جداً</div>
+      </div>
+
+      <div class="remember-row">
+        <label><input type="checkbox"> تذكرني</label>
+        <a href="#">نسيت كلمة المرور؟</a>
+      </div>
+
+      <button class="submit-btn" onclick="doLogin()">
+        <span class="btn-text">دخول ←</span>
+        <span class="loading">⏳ جاري التحقق...</span>
+      </button>
+      <div class="switch-text">ليس لديك حساب؟ <a onclick="switchTab('register')">سجّل الآن</a></div>
+    </div>
+
+    <!-- ===== REGISTER FORM ===== -->
+    <div class="auth-form" id="registerForm">
+      <div class="form-title">أنشئ حسابك 🌱</div>
+      <div class="form-sub">انضم لآلاف المزارعين والتجار على المنصة</div>
+
+      <div class="section-divider">اختر نوع حسابك</div>
+      <div class="role-select">
+        <button class="role-card selected" onclick="selectRole(this,'farmer')">
+          <span class="role-emoji">👨‍🌾</span>
+          <div class="role-name">مزارع</div>
+          <div class="role-desc">أبيع محاصيلي مباشرة</div>
+        </button>
+        <button class="role-card" onclick="selectRole(this,'trader')">
+          <span class="role-emoji">🏪</span>
+          <div class="role-name">تاجر / مشتري</div>
+          <div class="role-desc">أشتري من المزارعين</div>
+        </button>
+      </div>
+
+      <div class="section-divider">البيانات الأساسية</div>
+      <div class="field-row">
+        <div class="field" id="rFirstField"><label>الاسم الأول</label><div class="field-wrap"><span class="field-icon">👤</span><input type="text" id="rFirst" placeholder="محمد"></div><div class="field-error">مطلوب</div></div>
+        <div class="field" id="rLastField"> <label>الاسم الأخير</label><div class="field-wrap"><span class="field-icon">👤</span><input type="text" id="rLast"  placeholder="أحمد"></div><div class="field-error">مطلوب</div></div>
+      </div>
+      <div class="field" id="rPhoneField"><label>رقم الهاتف</label><div class="field-wrap"><span class="field-icon">📱</span><input type="tel" id="rPhone" placeholder="01XXXXXXXXX"></div><div class="field-error">رقم هاتف غير صحيح</div></div>
+      <div class="field" id="rEmailField"><label>البريد الإلكتروني</label><div class="field-wrap"><span class="field-icon">📧</span><input type="email" id="rEmail" placeholder="example@mail.com"></div><div class="field-error">بريد إلكتروني غير صحيح</div></div>
+
+      <!-- Farmer Fields -->
+      <div id="farmerFields">
+        <div class="section-divider">بيانات الأرض والمحصول</div>
+        <div class="field" id="rGovField">
+          <label>المحافظة</label>
+          <div class="field-wrap">
+            <span class="field-icon">📍</span>
+            <select id="rGov">
+              <option value="">اختر المحافظة</option>
+              <option>القاهرة</option><option>الجيزة</option><option>الإسكندرية</option>
+              <option>الشرقية</option><option>الدقهلية</option><option>المنوفية</option>
+              <option>البحيرة</option><option>الغربية</option><option>كفر الشيخ</option>
+              <option>الفيوم</option><option>بني سويف</option><option>المنيا</option>
+              <option>أسيوط</option><option>سوهاج</option><option>قنا</option>
+              <option>الأقصر</option><option>أسوان</option>
+            </select>
+          </div>
+          <div class="field-error">مطلوب</div>
+        </div>
+        <div class="field" id="rCityField"><label>المركز / القرية</label><div class="field-wrap"><span class="field-icon">🏘️</span><input type="text" id="rCity" placeholder="مثال: أبو حماد، ميت غمر"></div><div class="field-error">مطلوب</div></div>
+        <div class="field-row">
+          <div class="field" id="rCropField">
+            <label>نوع المحصول</label>
+            <div class="field-wrap">
+              <span class="field-icon">🌾</span>
+              <select id="rCrop">
+                <option value="">اختر المحصول</option>
+                <option>قمح</option><option>ذرة</option><option>أرز</option>
+                <option>بطاطس</option><option>طماطم</option><option>بصل</option>
+                <option>فلفل</option><option>خيار</option><option>كوسة</option>
+                <option>برتقال</option><option>مانجو</option><option>فراولة</option>
+                <option>قصب سكر</option><option>قطن</option><option>أخرى</option>
+              </select>
+            </div>
+            <div class="field-error">مطلوب</div>
+          </div>
+          <div class="field" id="rAreaField"><label>مساحة الأرض (فدان)</label><div class="field-wrap"><span class="field-icon">📐</span><input type="number" id="rArea" placeholder="مثال: 5" min="0.5" step="0.5"></div><div class="field-error">مطلوب</div></div>
+        </div>
+        <div class="field" id="rQtyField"><label>الكمية المتوقعة (طن/موسم)</label><div class="field-wrap"><span class="field-icon">⚖️</span><input type="number" id="rQty" placeholder="مثال: 10" min="1"></div><div class="field-error">مطلوب</div></div>
+      </div>
+
+      <!-- Trader Fields -->
+      <div id="traderFields" style="display:none;">
+        <div class="section-divider">بيانات النشاط التجاري</div>
+        <div class="field"><label>اسم الشركة / المحل</label><div class="field-wrap"><span class="field-icon">🏢</span><input type="text" id="companyName" placeholder="مثال: شركة النيل للتجارة"></div></div>
+        <div class="field"><label>نوع البضائع المطلوبة</label><div class="field-wrap"><span class="field-icon">🛒</span><select id="goodsType"><option value="">اختر تخصصك</option><option>خضروات</option><option>فاكهة</option><option>حبوب</option><option>متعدد</option></select></div></div>
+      </div>
+
+      <div class="section-divider">كلمة المرور</div>
+      <div class="field-row">
+        <div class="field" id="rPassField"> <label>كلمة المرور</label><div class="field-wrap"><span class="field-icon">🔒</span><input type="password" id="rPass"  placeholder="٨ أحرف على الأقل"></div><div class="field-error">٨ أحرف على الأقل</div></div>
+        <div class="field" id="rPass2Field"><label>تأكيد كلمة المرور</label><div class="field-wrap"><span class="field-icon">🔒</span><input type="password" id="rPass2" placeholder="أعد الكتابة"></div><div class="field-error">كلمتا المرور غير متطابقتين</div></div>
+      </div>
+
+      <button class="submit-btn" onclick="doRegister()">
+        <span class="btn-text">🌱 إنشاء الحساب</span>
+        <span class="loading">⏳ جاري التسجيل...</span>
+      </button>
+      <div class="switch-text">لديك حساب بالفعل؟ <a onclick="switchTab('login')">سجّل دخولك</a></div>
+    </div>
+
+    <!-- Success -->
+    <div class="success-overlay" id="successOverlay">
+      <div class="success-icon">🎉</div>
+      <div class="success-title">تم التسجيل بنجاح!</div>
+      <div class="success-sub">جاري توجيهك إلى لوحة التحكم...</div>
+      <button class="submit-btn" onclick="goDashboard()">الذهاب للداشبورد ←</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+</html>
