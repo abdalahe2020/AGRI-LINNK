@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نبذة عن أجري لينك | ربط المزارعين بالأسواق مباشرة</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body class="about-page">
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <a href="index.html" class="logo">
+    <div class="logo-icon">🌿</div>
+    أجري<span>- لينك</span>
+  </a>
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="index.html#features">المميزات</a></li>
+    <li><a href="index.html#how">كيف تعمل</a></li>
+    <li><a href="index.html#contact">تواصل معنا</a></li>
+    <li><a href="about.html">نبذة عننا</a></li>
+    <li><a href="dashboard.html" class="nav-cta">💹 البورصة</a></li>
+    <li><a href="login.html" class="nav-cta">سجّل دخولك</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="قائمة">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ===== PRICE TICKER ===== -->
+<div class="ticker-bar">
+  <div class="ticker-inner" id="ticker">
+    <div class="ticker-item">🌽 <span class="ticker-crop">ذرة</span>     <span class="ticker-price">٢٤٥ جنيه/طن</span>  <span class="ticker-up">▲ ٣.٢٪</span></div>
+    <div class="ticker-item">🍅 <span class="ticker-crop">طماطم</span>  <span class="ticker-price">٨٩ جنيه/كجم</span>   <span class="ticker-up">▲ ١.٥٪</span></div>
+    <div class="ticker-item">🥔 <span class="ticker-crop">بطاطس</span>  <span class="ticker-price">٥٦ جنيه/كجم</span>   <span class="ticker-dn">▼ ٠.٨٪</span></div>
+    <div class="ticker-item">🧅 <span class="ticker-crop">بصل</span>    <span class="ticker-price">٤٢ جنيه/كجم</span>   <span class="ticker-up">▲ ٢.١٪</span></div>
+    <div class="ticker-item">🫑 <span class="ticker-crop">فلفل</span>   <span class="ticker-price">١١٢ جنيه/كجم</span>  <span class="ticker-dn">▼ ١.٣٪</span></div>
+    <div class="ticker-item">🌾 <span class="ticker-crop">قمح</span>    <span class="ticker-price">٣٨٠ جنيه/أردب</span> <span class="ticker-up">▲ ٠.٥٪</span></div>
+    <div class="ticker-item">🍊 <span class="ticker-crop">برتقال</span> <span class="ticker-price">٦٥ جنيه/كجم</span>   <span class="ticker-up">▲ ٤.٠٪</span></div>
+    <!-- Duplicate for seamless loop -->
+    <div class="ticker-item">🌽 <span class="ticker-crop">ذرة</span>     <span class="ticker-price">٢٤٥ جنيه/طن</span>  <span class="ticker-up">▲ ٣.٢٪</span></div>
+    <div class="ticker-item">🍅 <span class="ticker-crop">طماطم</span>  <span class="ticker-price">٨٩ جنيه/كجم</span>   <span class="ticker-up">▲ ١.٥٪</span></div>
+    <div class="ticker-item">🥔 <span class="ticker-crop">بطاطس</span>  <span class="ticker-price">٥٦ جنيه/كجم</span>   <span class="ticker-dn">▼ ٠.٨٪</span></div>
+    <div class="ticker-item">🧅 <span class="ticker-crop">بصل</span>    <span class="ticker-price">٤٢ جنيه/كجم</span>   <span class="ticker-up">▲ ٢.١٪</span></div>
+    <div class="ticker-item">🫑 <span class="ticker-crop">فلفل</span>   <span class="ticker-price">١١٢ جنيه/كجم</span>  <span class="ticker-dn">▼ ١.٣٪</span></div>
+    <div class="ticker-item">🌾 <span class="ticker-crop">قمح</span>    <span class="ticker-price">٣٨٠ جنيه/أردب</span> <span class="ticker-up">▲ ٠.٥٪</span></div>
+    <div class="ticker-item">🍊 <span class="ticker-crop">برتقال</span> <span class="ticker-price">٦٥ جنيه/كجم</span>   <span class="ticker-up">▲ ٤.٠٪</span></div>
+  </div>
+</div>
+
+<!-- ===== ABOUT HERO ===== -->
+<section id="about-hero">
+  <div class="about-hero-content">
+    <div class="section-tag">نبذة عننا</div>
+    <h1 class="about-title">
+      نحن نربط المزارعين<br>
+      بالسوق <span class="gold">مباشرة</span><br>
+      باستخدام التكنولوجيا
+    </h1>
+    <p class="about-desc">
+      أجري لينك هي منصة رقمية مبتكرة تهدف إلى تحويل قطاع الزراعة في مصر من خلال 
+      تمكين المزارعين من بيع محاصيلهم بأسعار عادلة. نحن نجمع بين التقنية الحديثة واحتياجات السوق الزراع
+    </p>
+  </div>
+</section>
+
+<!-- ===== OUR STORY ===== -->
+<section id="story">
+  <div class="section-header">
+    <h2 class="section-title">قصتنا</h2>
+    <p class="section-desc">كيف بدأت رحلة أجري لينك في تغيير قطاع الزراعة</p>
+  </div>
+  <div class="story-content">
+    <div class="story-text">
+      <p>
+        أجري لينك هي شركة ناشئة مبتكرة تهدف إلى مواجهة إحدى أكبر المشاكل في قطاع الزراعة المصري: هدر المحاصيل.
+        لاحظنا أن نسبة كبيرة من الإنتاج الزراعي تُهدر سنوياً بسبب نقص التنسيق بين المزارعين والأسواق، مما يؤدي إلى خسائر اقتصادية هائلة وتأثير سلبي على الأمن الغذائي.
+      </p>
+      <p>
+        قررنا استخدام التكنولوجيا الرقمية لإنشاء منصة ذكية تربط المزارعين بالأسواق مباشرة، مما يقلل من الهدر ويحسن الكفاءة.
+        طورنا حلولاً مبتكرة تجمع بين البيانات الزراعية والذكاء الاصطناعي للتنبؤ بالإنتاج والطلب.
+      </p>
+      <p>
+        اليوم، نحن نساعد المزارعين على تقليل هدر محاصيلهم بنسبة تصل إلى ٤٠٪ من خلال تحسين سلاسل التوزيع والربط المباشر مع المشترين.
+        هدفنا هو بناء نظام زراعي مستدام يضمن وصول الغذاء الطازج إلى المستهلكين بأسعار عادلة.
+      </p>
+    </div>
+    <div class="story-image">
+      <img src="https://via.placeholder.com/500x300/4CAF50/FFFFFF?text=صورة+زراعية" alt="صورة زراعية" style="width:100%;border-radius:8px;">
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR TEAM ===== -->
+<section id="team">
+  <div class="section-header">
+    <h2 class="section-title">فريقنا</h2>
+    <p class="section-desc">الأشخاص الذين يقودون رؤيتنا لتطوير الزراعة في مصر</p>
+  </div>
+  <div class="team-grid">
+    <div class="team-member">
+      <h3> عبدالله حسن</h3>
+      <p>     المدير التنفيذي و المدير التقني</p>
+    </div>
+    <div class="team-member">
+      <h3>خالد اسماعيل</h3>
+      <p>المدير المالي</p>
+    </div>
+    <div class="team-member">
+      <h3>سليمان عبدالحكيم</h3>
+      <p>مدير التسويق والموارد البشرية</p>
+    </div>
+    <div class="team-member">
+      <h3> اسامه مصطفي</h3>
+      <p>  مدير المبيعات </p>
+    </div>
+    <div class="team-member">
+      <h3>  عبدالله حسام</h3>
+      <p> مدير العمليات و مدير المشروع</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR MISSION ===== -->
+<section id="mission">
+  <div class="mission-content">
+    <h2>رسالتنا</h2>
+    <p>
+      تمكين المزارعين المصريين من خلال التكنولوجيا لتحقيق دخل أفضل وتطوير قطاع زراعي مستدام.
+      نسعى لإنشاء نظام غذائي عادل وشفاف يربط الإنتاج بالاستهلاك مباشرة.
+    </p>
+    <div class="mission-values">
+      <div class="value-item">
+        <div class="value-icon">🤝</div>
+        <h4>الشفافية</h4>
+        <p>نضمن شفافية كاملة في جميع المعاملات</p>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🌱</div>
+        <h4>الاستدامة</h4>
+        <p>ندعم الممارسات الزراعية المستدامة</p>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">📈</div>
+        <h4>النمو</h4>
+        <p>نساعد المزارعين على زيادة دخلهم</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">🌿 أجري لينك</div>
+  <ul class="footer-links">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="index.html#features">المميزات</a></li>
+    <li><a href="login.html">تسجيل الدخول</a></li>
+    <li><a href="index.html#contact">تواصل</a></li>
+  </ul>
+  <div class="footer-copy">© ٢٠٢٥ أجري لينك — جميع الحقوق محفوظة</div>
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
